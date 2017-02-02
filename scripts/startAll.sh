@@ -6,7 +6,7 @@ do
 	cd "../../${REPO}"
 	if [ -e "app/main" ];
 	then
-  		go run app/main/main.go &
+  		bash -c "exec -a ${REPO} go run app/main/main.go &"
 	fi
 	cd ../infra/scripts/
 continue
